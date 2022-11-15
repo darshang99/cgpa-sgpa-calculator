@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA/SGPA CALCULATOR</title>
+    <script src="script.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-cartesian.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
+    <link rel="stylesheet" href="style3.css">
+    <script>
+        function newPage(url){
+            window.location.href = url;
+        }
+        function display(number)
+        {
+            alert(number);
+            var x = document.getElementById("main");
+            x.style.display = "none";
+            alert(x);
+            alert("Done");
+        }
+        function graph()
+        {
+            s1 = document.getElementById("one").value;
+            s2 = document.getElementById("two").value;
+            s3 = document.getElementById("three").value;
+            s4 = document.getElementById("four").value;
+            s5 = document.getElementById("five").value;
+            s6 = document.getElementById("six").value;
+            s7 = document.getElementById("seven").value;
+            s8 = document.getElementById("eight").value;
+            var data = [
+                    {x: "SEM1", value: s1},
+                    {x: "SEM2", value: s2},
+                    {x: "SEM3", value: s3},
+                    {x: "SEM4", value: s4},
+                    {x: "SEM5", value: s5},
+                    {x: "SEM6", value: s6},
+                    {x: "SEM7", value: s7},
+                    {x: "SEM8", value: s8}
+                ];
+                chart = anychart.line();
+                var series = chart.line(data)
+                //.x('SEM')
+                chart.xAxis().title("SEMESTER");
+                chart.yAxis().title("SGPA");
+                chart.yScale().minimum(0);
+                chart.container("container");
+                chart.background().fill("rgb(4, 12, 62)");
+                series.stroke("2 crimson");
+                chart.draw();
+        }
+        function func()
+        {
+            setTimeout(function() {
+                var msg = document.getElementById("one").value;
+                if (msg === "") {
+                  window.location.reload();
+                }
+              }, 200);
+        }
+    </script>
+</head>
+<body>
+    <!--Landing page-->
+    <div id="landing">
+        <h1 id="v">V</h1><h1 id="t">T</h1>
+        <!-- <div id="logo"><img src="/logo.jpg" height="30px"></div> -->
+        <p id="Cname">VARCONS TECH</p>
+        <!--comapny name-->
+
+        <!--Navigation-->
+        <div id="nav">
+            
+            <button class="custom-btn buttons" onclick="window.location.href='indexF.html';"> Sgpa Calc</button>
+            <button class="custom-btn buttons" onclick="window.location.href='cgpa.html';">Cgpa Calc</button>
+            <button class="custom-btn buttons" onclick="window.location.href='percentage.html';"> Percentage Calc</button>
+                <button class="custom-btn buttons"> About us</button>
+                <button class="custom-btn buttons"> Download Grades</button>
+        </div>
+
+        <!--Main-->
+        <div id="main">
+            <h5 id="subtitle">CGPA/SGPA CALCULATOR</h5>
+            <img src="/calculator.png" id="calc">
+            <h1 id="title">CGPA Calculator</h1>
+            <div id="workarea">
+                <div class="position">
+                    
+                  <!--start button, nothing above this is necessary -->
+                    <div id="form">
+                        <input type="number" name="" id="one" class="box" placeholder="1 SEM SGPA" oninput="func()">
+                        <input type="number" name="" id="two" class="box" placeholder="2 SEM SGPA">
+                        <input type="number" name="" id="three" class="box" placeholder="3 SEM SGPA">
+                        <input type="number" name="" id="four" class="box" placeholder="4 SEM SGPA">
+                        <input type="number" name="" id="five" class="box" placeholder="5 SEM SGPA">
+                        <input type="number" name="" id="six" class="box" placeholder="6 SEM SGPA">
+                        <input type="number" name="" id="seven" class="box" placeholder="7 SEM SGPA">
+                        <input type="number" name="" id="eight" class="box" placeholder="8 SEM SGPA">
+                    </div>
+                    <button class='lined thick' id="btnnn" onclick="graph()">Submit</button>
+                    <button class='lined thick' id="bbtnnn" onclick="window.location.href='cgpa.html';">clear</button>
+                </div>
+              </div>
+        </div>
+        <!--Result-->
+        <div id="result">
+            <h1 id="sub">Yours Progress</h1>
+            <div id="container" style="width: 28rem; height: 20rem"></div>
+   
+            <script>
+                
+            </script>
+            </div>
+        </div>
+    </div>
+    
+
+    
+</body>
+</html>

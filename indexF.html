@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA/SGPA CALCULATOR</title>
+    <script src="script.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        function draw1()
+        {
+            let s1 = document.getElementById("sone").value;
+            let s2 = parseInt(document.getElementById("stwo").value);
+            let s3 = parseInt(document.getElementById("sthree").value);
+            let s4 = parseInt(document.getElementById("sfour").value);
+            let s5 = parseInt(document.getElementById("sfive").value);
+            let s6 = parseInt(document.getElementById("ssix").value);
+            let s7 = parseInt(document.getElementById("sseven").value);
+            let s8 = parseInt(document.getElementById("seight").value);
+            let sgpa = (4 * Math.ceil(s1/10)+4* Math.ceil(s2/10) + 3*Math.ceil(s3/10) + 3* Math.ceil(s4/10) + 3*Math.ceil(s5/10) + 1*Math.ceil(s6/10) +1* Math.ceil(s7/10) + 1*Math.ceil(s8/10))/20;
+            var data = [
+                {x: "18MAT11/21", value: s1},
+                {x: "18PHY12/22", value: s2},
+                {x: "18ELE13/23", value: s3},
+                {x: "18CIV14/24", value: s4},
+                {x: "18EGDL15/25", value: s5},
+                {x: "18PHYL16/26", value: s6},
+                {x: "18ELEL17/27", value: s7},
+                {x: "18EGH18/28", value: s8}
+            ];
+          
+            // create the chart
+            var chart = anychart.pie();
+
+            alert(sgpa)
+            // set the chart title
+            chart.title("Your SGPA is: "+sgpa);
+          
+            // add the data
+            chart.data(data);
+            chart.background().fill("rgb(4, 12, 62)");
+          
+            // display the chart in the container
+            chart.container('container');
+            chart.labels().position("outside");
+            chart.draw();
+                          // set legend position
+            chart.legend().position("right");
+            // set items layout
+            chart.legend().itemsLayout("vertical");
+
+            // set the chart title
+            alert("Im not here")
+            
+        }
+        function func1()
+        {
+          //document.getElementById("main").style.display = "none";
+          document.getElementById("workarea").style.display = "none";
+          document.getElementById("workarea1").style.display = "block";
+          document.getElementById("usn").style.display = "block";
+        }
+        function draw2()
+        {
+            let s1 = parseInt(document.getElementById("s2one").value);
+            let s2 = parseInt(document.getElementById("s2two").value);
+            let s3 = parseInt(document.getElementById("s2three").value);
+            let s4 = parseInt(document.getElementById("s2four").value);
+            let s5 = parseInt(document.getElementById("s2five").value);
+            let s6 = parseInt(document.getElementById("s2six").value);
+            let s7 = parseInt(document.getElementById("s2seven").value);
+            let s8 = parseInt(document.getElementById("s2eight").value);
+            let sgpa = (4 * Math.ceil(s1/10)+4* Math.ceil(s2/10) + 3*Math.ceil(s3/10) + 3* Math.ceil(s4/10) + 3*Math.ceil(s5/10) + 1*Math.ceil(s6/10) +1* Math.ceil(s7/10) + 1*Math.ceil(s8/10))/20;
+            var data = [
+                {x: "18MAT11/21", value: s1},
+                {x: "18CHE12/22", value: s2},
+                {x: "18CPS13/23", value: s3},
+                {x: "18ELN14/24", value: s4},
+                {x: "18ME15/25", value: s5},
+                {x: "8CHEL16/26", value: s6},
+                {x: "18CPL17/27", value: s7},
+                {x: "18EGH18/28", value: s8}
+            ];
+          
+            // create the chart
+            var chart = anychart.pie();
+
+            alert(sgpa)
+            // set the chart title
+            chart.title("Your SGPA is: "+sgpa);
+          
+            // add the data
+            chart.data(data);
+            chart.background().fill("rgb(4, 12, 62)");
+          
+            // display the chart in the container
+            chart.container('container');
+            chart.labels().position("outside");
+            chart.draw();
+                          // set legend position
+            chart.legend().position("right");
+            // set items layout
+            chart.legend().itemsLayout("vertical");
+
+            // set the chart title
+            alert("Im not here")
+            
+        }
+        function func2()
+        {
+          //document.getElementById("main").style.display = "none";
+          document.getElementById("workarea").style.display = "none";
+          document.getElementById("workarea2").style.display = "block";
+          document.getElementById("usn").style.display = "block";
+        }
+        function draw3()
+        {
+            let s1 = parseInt(document.getElementById("s3one").value);
+            let s2 = parseInt(document.getElementById("s3two").value);
+            let s3 = parseInt(document.getElementById("s3three").value);
+            let s4 = parseInt(document.getElementById("s3four").value);
+            let s5 = parseInt(document.getElementById("s3five").value);
+            let s6 = parseInt(document.getElementById("s3six").value);
+            let s7 = parseInt(document.getElementById("s3seven").value);
+            let s8 = parseInt(document.getElementById("s3eight").value);
+            let s9 = parseInt(document.getElementById("s3nine").value);
+            let sgpa = (3 * Math.ceil(s1/10)+4* Math.ceil(s2/10) + 3*Math.ceil(s3/10) + 3* Math.ceil(s4/10) + 3*Math.ceil(s5/10) + 3*Math.ceil(s6/10) +2* Math.ceil(s7/10) + 2*Math.ceil(s8/10) + Math.ceil(s9/10))/24;
+            var data = [
+                {x: "18XX31", value: s1},
+                {x:  "18XX32", value: s2},
+                {x: "18XX33", value: s3},
+                {x:  "18XX34", value: s4},
+                {x:  "18XX35", value: s5},
+                {x: "18XX36", value: s6},
+                {x: "18XXL37", value: s7},
+                {x:  "18XXL38", value: s8},
+                {x:  "18CPC39/49 or Kannada", value: s9},
+            ];
+          
+            // create the chart
+            var chart = anychart.pie();
+
+            alert(sgpa)
+            // set the chart title
+            chart.title("Your SGPA is: "+sgpa);
+          
+            // add the data
+            chart.data(data);
+            chart.background().fill("rgb(4, 12, 62)");
+          
+            // display the chart in the container
+            chart.container('container');
+            chart.labels().position("outside");
+            chart.draw();
+                          // set legend position
+            chart.legend().position("right");
+            // set items layout
+            chart.legend().itemsLayout("vertical");
+
+            // set the chart title
+            alert("Im not here")
+            
+        }
+        function func3()
+        {
+          //document.getElementById("main").style.display = "none";
+          document.getElementById("workarea").style.display = "none";
+          document.getElementById("workarea3").style.display = "block";
+          document.getElementById("usn").style.display = "block";
+        }
+        function draw4()
+        {
+            let s1 = parseInt(document.getElementById("s4one").value);
+            let s2 = parseInt(document.getElementById("s4two").value);
+            let s3 = parseInt(document.getElementById("s4three").value);
+            let s4 = parseInt(document.getElementById("s4four").value);
+            let s5 = parseInt(document.getElementById("s4five").value);
+            let s6 = parseInt(document.getElementById("s4six").value);
+            let s7 = parseInt(document.getElementById("s4seven").value);
+            let s8 = parseInt(document.getElementById("s4eight").value);
+            let s9 = parseInt(document.getElementById("s4nine").value);
+            let sgpa = (3 * Math.ceil(s1/10)+4* Math.ceil(s2/10) + 3*Math.ceil(s3/10) + 3* Math.ceil(s4/10) + 3*Math.ceil(s5/10) + 3*Math.ceil(s6/10) +2* Math.ceil(s7/10) + 2*Math.ceil(s8/10) + Math.ceil(s9/10))/24;
+            var data = [
+                {x: "18XX41", value: s1},
+                {x: "18XX42", value: s2},
+                {x: "18XX43", value: s3},
+                {x: "18XX44", value: s4},
+                {x: "18XX45", value: s5},
+                {x: "18XX46", value: s6},
+                {x: "18XXL47", value: s7},
+                {x: "18XXL48", value: s8},
+                {x: "18CPC49/39 or Kannada", value: s9},
+            ];
+          
+            // create the chart
+            var chart = anychart.pie();
+
+            alert(sgpa)
+            // set the chart title
+            chart.title("Your SGPA is: "+sgpa);
+          
+            // add the data
+            chart.data(data);
+            chart.background().fill("rgb(4, 12, 62)");
+          
+            // display the chart in the container
+            chart.container('container');
+            chart.labels().position("outside");
+            chart.draw();
+                          // set legend position
+            chart.legend().position("right");
+            // set items layout
+            chart.legend().itemsLayout("vertical");
+
+            // set the chart title
+            alert("Im not here")
+            
+        }
+        function func4()
+        {
+          //document.getElementById("main").style.display = "none";
+          document.getElementById("workarea").style.display = "none";
+          document.getElementById("workarea4").style.display = "block";
+          document.getElementById("usn").style.display = "block";
+        }
+        function draw5()
+        {
+            let s1 = parseInt(document.getElementById("s5one").value);
+            let s2 = parseInt(document.getElementById("s5two").value);
+            let s3 = parseInt(document.getElementById("s5three").value);
+            let s4 = parseInt(document.getElementById("s5four").value);
+            let s5 = parseInt(document.getElementById("s5five").value);
+            let s6 = parseInt(document.getElementById("s5six").value);
+            let s7 = parseInt(document.getElementById("s5seven").value);
+            let s8 = parseInt(document.getElementById("s5eight").value);
+            let s9 = parseInt(document.getElementById("s5nine").value);
+            let sgpa = (3 * Math.ceil(s1/10)+4* Math.ceil(s2/10) + 4*Math.ceil(s3/10) + 3* Math.ceil(s4/10) + 3*Math.ceil(s5/10) + 3*Math.ceil(s6/10) +2* Math.ceil(s7/10) + 2*Math.ceil(s8/10) + Math.ceil(s9/10))/25;
+            var data = [
+                {x: "18XX51", value: s1},
+                {x: "18XX52", value: s2},
+                {x: "18XX53", value: s3},
+                {x: "18XX54", value: s4},
+                {x: "18XX55", value: s5},
+                {x: "18XX56", value: s6},
+                {x: "18XXL57", value: s7},
+                {x: "18XXL58", value: s8},
+                {x: "Environmental studies", value: s9}
+            ];
+          
+            // create the chart
+            var chart = anychart.pie();
+
+            alert(sgpa)
+            // set the chart title
+            chart.title("Your SGPA is: "+sgpa);
+          
+            // add the data
+            chart.data(data);
+            chart.background().fill("rgb(4, 12, 62)");
+          
+            // display the chart in the container
+            chart.container('container');
+            chart.labels().position("outside");
+            chart.draw();
+                          // set legend position
+            chart.legend().position("right");
+            // set items layout
+            chart.legend().itemsLayout("vertical");
+
+            // set the chart title
+            alert("Im not here")
+            
+        }
+        function func5()
+        {
+          //document.getElementById("main").style.display = "none";
+          document.getElementById("workarea").style.display = "none";
+          document.getElementById("workarea5").style.display = "block";
+          document.getElementById("usn").style.display = "block";
+        }
+        function draw6()
+        {
+            let s1 = parseInt(document.getElementById("s6one").value);
+            let s2 = parseInt(document.getElementById("s6two").value);
+            let s3 = parseInt(document.getElementById("s6three").value);
+            let s4 = parseInt(document.getElementById("s6four").value);
+            let s5 = parseInt(document.getElementById("s6five").value);
+            let s6 = parseInt(document.getElementById("s6six").value);
+            let s7 = parseInt(document.getElementById("s6seven").value);
+            let s8 = parseInt(document.getElementById("s6eight").value);
+            let sgpa = (4 * Math.ceil(s1/10)+4* Math.ceil(s2/10) + 4*Math.ceil(s3/10) + 3* Math.ceil(s4/10) + 3*Math.ceil(s5/10) + 2*Math.ceil(s6/10) +2* Math.ceil(s7/10) + 2*Math.ceil(s8/10))/24;
+            var data = [
+                {x: "18XX61", value: s1},
+                {x: "18XX62", value: s2},
+                {x: "18XX63", value: s3},
+                {x: "18XX64", value: s4},
+                {x: "18XX65", value: s5},
+                {x: "18XXL66", value: s6},
+                {x: "18XXL67", value: s7},
+                {x: "18XXMP68 Mini-Project", value: s8}
+            ];
+          
+            // create the chart
+            var chart = anychart.pie();
+
+            alert(sgpa)
+            // set the chart title
+            chart.title("Your SGPA is: "+sgpa);
+          
+            // add the data
+            chart.data(data);
+            chart.background().fill("rgb(4, 12, 62)");
+          
+            // display the chart in the container
+            chart.container('container');
+            chart.labels().position("outside");
+            chart.draw();
+                          // set legend position
+            chart.legend().position("right");
+            // set items layout
+            chart.legend().itemsLayout("vertical");
+
+            // set the chart title
+            alert("Im not here")
+            
+        }
+        function func6()
+        {
+          //document.getElementById("main").style.display = "none";
+          document.getElementById("workarea").style.display = "none";
+          document.getElementById("workarea6").style.display = "block";
+          document.getElementById("usn").style.display = "block";
+        }
+        function draw7()
+        {
+            let s1 = parseInt(document.getElementById("s7one").value);
+            let s2 = parseInt(document.getElementById("s7two").value);
+            let s3 = parseInt(document.getElementById("s7three").value);
+            let s4 = parseInt(document.getElementById("s7four").value);
+            let s5 = parseInt(document.getElementById("s7five").value);
+            let s6 = parseInt(document.getElementById("s7six").value);
+            let s7 = parseInt(document.getElementById("s7seven").value);
+
+            let sgpa = (4 * Math.ceil(s1/10)+4* Math.ceil(s2/10) + 3*Math.ceil(s3/10) + 3* Math.ceil(s4/10) + 3*Math.ceil(s5/10) + 2*Math.ceil(s6/10) + Math.ceil(s7/10))/20;
+            var data = [
+                {x: "18XX71", value: s1},
+                {x: "18XX72", value: s2},
+                {x: "18XX73X", value: s3},
+                {x: "18XX74X", value: s4},
+                {x: "18XX75X", value: s5},
+                {x: "18XX76", value: s6},
+                {x: "18XXP77", value: s7},
+            ];
+          
+            // create the chart
+            var chart = anychart.pie();
+
+            alert(sgpa)
+            // set the chart title
+            chart.title("Your SGPA is: "+sgpa);
+          
+            // add the data
+            chart.data(data);
+            chart.background().fill("rgb(4, 12, 62)");
+          
+            // display the chart in the container
+            chart.container('container');
+            chart.labels().position("outside");
+            chart.draw();
+                          // set legend position
+            chart.legend().position("right");
+            // set items layout
+            chart.legend().itemsLayout("vertical");
+
+            // set the chart title
+            alert("Im not here")
+            
+        }
+        function func7()
+        {
+          //document.getElementById("main").style.display = "none";
+          document.getElementById("workarea").style.display = "none";
+          document.getElementById("workarea7").style.display = "block";
+          document.getElementById("usn").style.display = "block";
+        }
+        function draw8()
+        {
+            let s1 = parseInt(document.getElementById("s8one").value);
+            let s2 = parseInt(document.getElementById("s8two").value);
+            let s3 = parseInt(document.getElementById("s8three").value);
+            let s4 = parseInt(document.getElementById("s8four").value);
+            let s5 = parseInt(document.getElementById("s8five").value);
+
+            let sgpa = (3 * Math.ceil(s1/10)+3* Math.ceil(s2/10) + 8*Math.ceil(s3/10) + 1* Math.ceil(s4/10) + 3*Math.ceil(s5/10))/18;
+            var data = [
+                {x: "18XX81", value: s1},
+                {x: "18XX82X", value: s2},
+                {x: "18XXP83", value: s3},
+                {x: "18XXS84", value: s4},
+                {x: "18XX185(Internship)", value: s5},
+            ];
+          
+            // create the chart
+            var chart = anychart.pie();
+
+            alert(sgpa)
+            // set the chart title
+            chart.title("Your SGPA is: "+sgpa);
+          
+            // add the data
+            chart.data(data);
+            chart.background().fill("rgb(4, 12, 62)");
+          
+            // display the chart in the container
+            chart.container('container');
+            chart.labels().position("outside");
+            chart.draw();
+                          // set legend position
+            chart.legend().position("right");
+            // set items layout
+            chart.legend().itemsLayout("vertical");
+
+            // set the chart title
+            alert("Im not here")
+            
+        }
+        function func8()
+        {
+          //document.getElementById("main").style.display = "none";
+          document.getElementById("workarea").style.display = "none";
+          document.getElementById("workarea8").style.display = "block";
+          document.getElementById("usn").style.display = "block";
+        }
+        function cal()
+        {
+          s1 = parseInt(document.getElementById("sone").value);
+          alert(s1);
+          s = Math.ceil(s1/10)
+          alert(s);
+        }
+    </script>
+</head>
+<body>
+    <!--Landing page-->
+    <div id="landing">
+        <h1 id="v">V</h1><h1 id="t">T</h1>
+        <!-- <div id="logo"><img src="/logo.jpg" height="30px"></div> -->
+        <p id="Cname">VARCONS TECH</p>
+        <!--comapny name-->
+
+        <!--Navigation-->
+        <div id="nav">
+            
+                <button class="custom-btn buttons" onclick="window.location.href='indexF.html';"> Sgpa Calc</button>
+                <button class="custom-btn buttons" onclick="window.location.href='cgpa.html';">Cgpa Calc</button>
+                <button class="custom-btn buttons" onclick="window.location.href='percentage.html';"> Percentage Calc</button>
+                <button class="custom-btn buttons"> About us</button>
+                <button class="custom-btn buttons"> Download Grades</button>
+        </div>
+
+        <!--Main-->
+        <div id="main">
+            <h5 id="subtitle">CGPA/SGPA CALCULATOR</h5>
+            <img src="/calculator.png" id="calc">
+            <h1 id="title">SGPA Calculator</h1>
+            <div id="workarea1">
+              <div class="position1">
+                  
+                  <div id="form">
+                      <input type="number" name="" id="sone" class="box" placeholder="18MAT11/21">
+                      <input type="number" name="" id="stwo" class="box" placeholder="18PHY12/22">
+                      <input type="number" name="" id="sthree" class="box" placeholder="18ELE13/23">
+                      <input type="number" name="" id="sfour" class="box" placeholder="18CIV14/24">
+                      <input type="number" name="" id="sfive" class="box" placeholder="18EGDL15/25">
+                      <input type="number" name="" id="ssix" class="box" placeholder="18PHYL16/26">
+                      <input type="number" name="" id="sseven" class="box" placeholder="18ELEL17/27">
+                      <input type="number" name="" id="seight" class="box" placeholder="18EGH18/28">
+                  </div>
+                  <button class='lined thick' id="btnnn" onclick="draw1()">Submit</button>
+                  <button class='lined thick' id="bbtnnn" onclick="window.location.href='indexF.html';">Go Back</button>
+              </div>
+            </div>
+            <div id="workarea2">
+              <div class="position2">
+                  
+                  <div id="form" >
+                      <input type="number" name="" id="s2one" class="box" placeholder="18MAT11/21">
+                      <input type="number" name="" id="s2two" class="box" placeholder="18CHE12/22">
+                      <input type="number" name="" id="s2three" class="box" placeholder="18CPS13/23">
+                      <input type="number" name="" id="s2four" class="box" placeholder="18ELN14/24">
+                      <input type="number" name="" id="s2five" class="box" placeholder="18ME15/25">
+                      <input type="number" name="" id="s2six" class="box" placeholder="18CHEL16/26">
+                      <input type="number" name="" id="s2seven" class="box" placeholder="18CPL17/27">
+                      <input type="number" name="" id="s2eight" class="box" placeholder="18EGH18/28">
+                  </div>
+                  <button class='lined thick' id="btnnn" onclick="draw2()">Submit</button>
+                  <button class='lined thick' id="bbtnnn" onclick="window.location.href='indexF.html';">Go Back</button>
+              </div>
+            </div>
+            <div id="workarea3">
+              <div class="position3">
+                  
+                  <div id="form">
+                      <input type="number" name="" id="s3one" class="box" placeholder="18XX31">
+                      <input type="number" name="" id="s3two" class="box" placeholder="18XX32">
+                      <input type="number" name="" id="s3three" class="box" placeholder="18XX33">
+                      <input type="number" name="" id="s3four" class="box" placeholder="18XX34">
+                      <input type="number" name="" id="s3five" class="box" placeholder="18XX35">
+                      <input type="number" name="" id="s3six" class="box" placeholder="18XX36">
+                      <input type="number" name="" id="s3seven" class="box" placeholder="18XXL37">
+                      <input type="number" name="" id="s3eight" class="box" placeholder="18XXL38">
+                      <input type="number" name="" id="s3nine" class="box" placeholder="18CPC39/49 or Kannada">
+                      
+                  </div>
+                  <button class='lined thick btnn' id="btnnn"  onclick="draw3()">Submit</button>
+                  <button class='lined thick' id="bbtnnn" onclick="window.location.href='indexF.html';">Go Back</button>
+              </div>
+            </div>
+            <div id="workarea4">
+              <div class="position4">
+                  
+                  <div id="form">
+                    <input type="number" name="" id="s4one" class="box" placeholder="18XX41">
+                    <input type="number" name="" id="s4two" class="box" placeholder="18XX42">
+                    <input type="number" name="" id="s4three" class="box" placeholder="18XX43">
+                    <input type="number" name="" id="s4four" class="box" placeholder="18XX44">
+                    <input type="number" name="" id="s4five" class="box" placeholder="18XX45">
+                    <input type="number" name="" id="s4six" class="box" placeholder="18XX46">
+                    <input type="number" name="" id="s4seven" class="box" placeholder="18XXL47">
+                    <input type="number" name="" id="s4eight" class="box" placeholder="18XXL48">
+                    <input type="number" name="" id="s4nine" class="box" placeholder="18CPC39/49 or Kannada">
+
+                  </div>
+                  <button class='lined thick' id="btnnn" onclick="draw4()">Submit</button>
+                  <button class='lined thick' id="bbtnnn" onclick="window.location.href='indexF.html';">Go Back</button>
+
+                  
+              </div>
+            </div>
+            <div id="workarea5">
+              <div class="position5">
+                  
+                  <div id="form">
+                    <input type="number" name="" id="s5one" class="box" placeholder="18XX51">
+                    <input type="number" name="" id="s5two" class="box" placeholder="18XX52">
+                    <input type="number" name="" id="s5three" class="box" placeholder="18XX53">
+                    <input type="number" name="" id="s5four" class="box" placeholder="18XX54">
+                    <input type="number" name="" id="s5five" class="box" placeholder="18XX55">
+                    <input type="number" name="" id="s5six" class="box" placeholder="18XX56">
+                    <input type="number" name="" id="s5seven" class="box" placeholder="18XXL57">
+                    <input type="number" name="" id="s5eight" class="box" placeholder="18XXL58">
+                    <input type="number" name="" id="s5nine" class="box" placeholder="Environmental Studies">
+                  </div>
+                  <button class='lined thick' id="btnnn" onclick="draw5()">Submit</button>
+                  <button class='lined thick' id="bbtnnn" onclick="window.location.href='indexF.html';">Go Back</button>
+              </div>
+            </div>
+            <div id="workarea6">
+              <div class="position6">
+                  
+                  <div id="form">
+                    <input type="number" name="" id="s6one" class="box" placeholder="18XX61">
+                    <input type="number" name="" id="s6two" class="box" placeholder="18XX62">
+                    <input type="number" name="" id="s6three" class="box" placeholder="18XX63">
+                    <input type="number" name="" id="s6four" class="box" placeholder="18XX64">
+                    <input type="number" name="" id="s6five" class="box" placeholder="18XX65">
+                    <input type="number" name="" id="s6six" class="box" placeholder="18XXL66">
+                    <input type="number" name="" id="s6seven" class="box" placeholder="18XXL67">
+                    <input type="number" name="" id="s6eight" class="box" placeholder="18XXMP68 Mini-Project">
+                  </div>
+                  <button class='lined thick' id="btnnn" onclick="draw6()">Submit</button>
+                  <button class='lined thick' id="bbtnnn" onclick="window.location.href='indexF.html';">Go Back</button>
+              </div>
+            </div>
+            <div id="workarea7">
+              <div class="position7">
+                  
+                  <div id="form">
+                    <input type="number" name="" id="s7one" class="box" placeholder="18XX71">
+                    <input type="number" name="" id="s7two" class="box" placeholder="18XX72">
+                    <input type="number" name="" id="s7three" class="box" placeholder="18XX73X">
+                    <input type="number" name="" id="s7four" class="box" placeholder="18XX74X">
+                    <input type="number" name="" id="s7five" class="box" placeholder="18XX75X">
+                    <input type="number" name="" id="s7six" class="box" placeholder="18XX76">
+                    <input type="number" name="" id="s7seven" class="box" placeholder="18XXP77">
+
+                  </div>
+                  <button class='lined thick' id="btnnn" onclick="draw7()">Submit</button>
+                  <button class='lined thick' id="bbtnnn" onclick="window.location.href='indexF.html';">Go Back</button>
+              </div>
+            </div>
+            <div id="workarea8">
+              <div class="position8">
+                  
+                  <div id="form">
+                    <input type="number" name="" id="s8one" class="box" placeholder="18XX81">
+                    <input type="number" name="" id="s8two" class="box" placeholder="18XX82X">
+                    <input type="number" name="" id="s8three" class="box" placeholder="18XXP83">
+                    <input type="number" name="" id="s8four" class="box" placeholder="18XXS84">
+                    <input type="number" name="" id="s8five" class="box" placeholder="18XX185(Internship)">
+                  </div>
+                  <button class='lined thick' id="btnnn" onclick="draw8()">Submit</button>
+                  <button class='lined thick' id="bbtnnn" onclick="window.location.href='indexF.html';">Go Back</button>
+
+              </div>
+            </div>
+            <div id="workarea">
+                <div class="position">
+              
+                  <!--start button, nothing above this is necessary -->
+                  <div class="svg-wrapper" id="row">
+                    <svg height="60" width="180" xmlns="http://www.w3.org/2000/svg">
+                      <rect id="shape" height="60" width="180" />
+                      <div id="text">
+                        <a href="#" onclick="func1()"><span class="spot"></span>1st & 2nd SEM
+                            PHYSICS</a>
+                      </div>
+                    </svg>
+                  </div>
+                  <div class="svg-wrapper" id="col">
+                    <svg height="60" width="180" xmlns="http://www.w3.org/2000/svg">
+                      <rect id="shape" height="60" width="180" />
+                      <div id="text">
+                        <a href="#" onclick="func2()"><span class="spot"></span>1st & 2nd SEM
+                            CHEMISTRY</a>
+                      </div>
+                    </svg>
+                  </div>
+                  <div class="svg-wrapper" id="row">
+                    <svg height="60" width="180" xmlns="http://www.w3.org/2000/svg">
+                      <rect id="shape" height="60" width="180" />
+                      <div id="text">
+                        <a href="#" onclick="func3()"><span class="spot"></span>3rd SEM
+                            <br> All Branch</a>
+                      </div>
+                    </svg>
+                  </div>
+                  <div class="svg-wrapper" id="col">
+                    <svg height="60" width="180" xmlns="http://www.w3.org/2000/svg">
+                      <rect id="shape" height="60" width="180" />
+                      <div id="text">
+                        <a href="#" onclick="func4()"><span class="spot"></span>4th SEM
+                            <br> All Branch</a>
+                      </div>
+                    </svg>
+                  </div>
+                  <div class="svg-wrapper" id="row">
+                    <svg height="60" width="180" xmlns="http://www.w3.org/2000/svg">
+                      <rect id="shape" height="60" width="180" />
+                      <div id="text">
+                        <a href="#" onclick="func5()"><span class="spot"></span>5th SEM
+                            <br> All Branch</a>
+                      </div>
+                    </svg>
+                  </div>
+                  <div class="svg-wrapper" id="col">
+                    <svg height="60" width="180" xmlns="http://www.w3.org/2000/svg">
+                      <rect id="shape" height="60" width="180" />
+                      <div id="text">
+                        <a href="#" onclick="func6()"><span class="spot"></span>6th SEM
+                            <br> All Branch</a>
+                      </div>
+                    </svg>
+                  </div>
+                  <div class="svg-wrapper" id="row">
+                    <svg height="60" width="180" xmlns="http://www.w3.org/2000/svg">
+                      <rect id="shape" height="60" width="180" />
+                      <div id="text">
+                        <a href="#" onclick="func7()"><span class="spot"></span>7th SEM
+                            <br> All Branch</a>
+                      </div>
+                    </svg>
+                  </div>
+                  
+                  <div class="svg-wrapper" id="col">
+                    <svg height="60" width="180" xmlns="http://www.w3.org/2000/svg">
+                      <rect id="shape" height="60" width="180" />
+                      <div id="text">
+                        <a href="#" onclick="func8()"><span class="spot"></span>8th SEM
+                            <br> All Branch</a>
+                      </div>
+                    </svg>
+                  </div>
+
+                </div>
+              </div>
+        </div>
+        <!--Result-->
+        <div id="result">
+          <form action="sgpa.php" method="post">
+            <input type="text" name="" id="usn" class="boxx" placeholder="Enter your USN"></form>
+            <h1 id="sub">Yours Progress</h1>
+            <div id="container" style="width: 30rem; height: 25rem"></div>
+            
+        </div>
+    </div>
+    
+
+    
+</body>
+</html>
