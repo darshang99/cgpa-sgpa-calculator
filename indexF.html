@@ -12,7 +12,7 @@
     <script>
         function draw1()
         {
-            let s1 = document.getElementById("sone").value;
+            let s1 = document.getElementById("sone").value;//get the values enetered on the input box
             let s2 = parseInt(document.getElementById("stwo").value);
             let s3 = parseInt(document.getElementById("sthree").value);
             let s4 = parseInt(document.getElementById("sfour").value);
@@ -20,7 +20,7 @@
             let s6 = parseInt(document.getElementById("ssix").value);
             let s7 = parseInt(document.getElementById("sseven").value);
             let s8 = parseInt(document.getElementById("seight").value);
-            let sgpa = (4 * Math.ceil(s1/10)+4* Math.ceil(s2/10) + 3*Math.ceil(s3/10) + 3* Math.ceil(s4/10) + 3*Math.ceil(s5/10) + 1*Math.ceil(s6/10) +1* Math.ceil(s7/10) + 1*Math.ceil(s8/10))/20;
+            let sgpa = (4 * Math.ceil(s1/10)+4* Math.ceil(s2/10) + 3*Math.ceil(s3/10) + 3* Math.ceil(s4/10) + 3*Math.ceil(s5/10) + 1*Math.ceil(s6/10) +1* Math.ceil(s7/10) + 1*Math.ceil(s8/10))/20;//to calculate the sgpa
             var data = [
                 {x: "18MAT11/21", value: s1},
                 {x: "18PHY12/22", value: s2},
@@ -51,21 +51,19 @@
             chart.legend().position("right");
             // set items layout
             chart.legend().itemsLayout("vertical");
-
-            // set the chart title
-            alert("Im not here")
             
         }
         function func1()
         {
-          //document.getElementById("main").style.display = "none";
-          document.getElementById("workarea").style.display = "none";
-          document.getElementById("workarea1").style.display = "block";
+
+          document.getElementById("workarea").style.display = "none";//to hide the semester details on clicking the particluar sem
+          document.getElementById("workarea1").style.display = "block";// to unhide the div so that user can enter the data they obtained in every subject
           document.getElementById("usn").style.display = "block";
         }
+        //same goes for all the 8 sems below
         function draw2()
         {
-            let s1 = parseInt(document.getElementById("s2one").value);
+            let s1 = parseInt(document.getElementById("s2one").value); 
             let s2 = parseInt(document.getElementById("s2two").value);
             let s3 = parseInt(document.getElementById("s2three").value);
             let s4 = parseInt(document.getElementById("s2four").value);
@@ -73,7 +71,7 @@
             let s6 = parseInt(document.getElementById("s2six").value);
             let s7 = parseInt(document.getElementById("s2seven").value);
             let s8 = parseInt(document.getElementById("s2eight").value);
-            let sgpa = (4 * Math.ceil(s1/10)+4* Math.ceil(s2/10) + 3*Math.ceil(s3/10) + 3* Math.ceil(s4/10) + 3*Math.ceil(s5/10) + 1*Math.ceil(s6/10) +1* Math.ceil(s7/10) + 1*Math.ceil(s8/10))/20;
+            let sgpa = (4 * Math.ceil(s1/10)+4* Math.ceil(s2/10) + 3*Math.ceil(s3/10) + 3* Math.ceil(s4/10) + 3*Math.ceil(s5/10) + 1*Math.ceil(s6/10) +1* Math.ceil(s7/10) + 1*Math.ceil(s8/10))/20; //calculating the sgpa 
             var data = [
                 {x: "18MAT11/21", value: s1},
                 {x: "18CHE12/22", value: s2},
@@ -88,7 +86,6 @@
             // create the chart
             var chart = anychart.pie();
 
-            alert(sgpa)
             // set the chart title
             chart.title("Your SGPA is: "+sgpa);
           
@@ -105,8 +102,6 @@
             // set items layout
             chart.legend().itemsLayout("vertical");
 
-            // set the chart title
-            alert("Im not here")
             
         }
         function func2()

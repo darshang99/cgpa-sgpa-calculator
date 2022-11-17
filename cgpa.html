@@ -14,24 +14,49 @@
         function newPage(url){
             window.location.href = url;
         }
-        function display(number)
-        {
-            alert(number);
-            var x = document.getElementById("main");
-            x.style.display = "none";
-            alert(x);
-            alert("Done");
-        }
         function graph()
         {
+            count = 0 //to count the number of subjects the marks has been entered
             s1 = document.getElementById("one").value;
+            if(s1!='')
+            {
+                count++;
+            }
             s2 = document.getElementById("two").value;
+            if(s2!='')
+            {
+                count++;
+            }
             s3 = document.getElementById("three").value;
+            if(s3!='')
+            {
+                count++;
+            }
             s4 = document.getElementById("four").value;
+            if(s4!='')
+            {
+                count++;
+            }
             s5 = document.getElementById("five").value;
+            if(s5!='')
+            {
+                count++;
+            }
             s6 = document.getElementById("six").value;
+            if(s6!='')
+            {
+                count++;
+            }
             s7 = document.getElementById("seven").value;
+            if(s7!='')
+            {
+                count++;
+            }
             s8 = document.getElementById("eight").value;
+            if(s8!='')
+            {
+                count++;
+            }
             var data = [
                     {x: "SEM1", value: s1},
                     {x: "SEM2", value: s2},
@@ -44,7 +69,9 @@
                 ];
                 chart = anychart.line();
                 var series = chart.line(data)
+                let cgpa = (parseFloat(s1)+parseFloat(s2)+parseFloat(s3)+parseFloat(s4)+parseFloat(s5)+parseFloat(s6)+parseFloat(s7)+parseFloat(s8))/count;
                 //.x('SEM')
+                chart.title("Your Cgpa is "+cgpa);
                 chart.xAxis().title("SEMESTER");
                 chart.yAxis().title("SGPA");
                 chart.yScale().minimum(0);
